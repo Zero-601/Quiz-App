@@ -6,6 +6,8 @@
 }
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -17,6 +19,14 @@ body {
   display: flex;
   justify-content: center;
   font-size: 1em;
+}
+input {
+  border: none;
+  border-bottom: 2px solid var(--maroon);
+  background-color: transparent;
+  outline: none;
+  color: white;
+  font-weight: bolder;
 }
 button {
   border: none;
@@ -43,9 +53,77 @@ button {
   border-radius: 40px;
   border: 2px solid var(--maroon);
   font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .menu > button:hover {
   background-color: var(--maroon);
-
   color: white;
+}
+
+.popup-area {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(12, 12, 12, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-box {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  background-color: #181818;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  .box-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.box-difficulty {
+  max-width: 500px;
+  max-height: 500px;
+  width: 40%;
+  height: 80%;
+  h2 {
+    font-size: 170%;
+  }
+  .back-btn {
+    margin-top: 20px;
+  }
+}
+
+.diff-list {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 30px;
+  .difficulty-btn {
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  .easy-btn {
+    background-color: #7aba78;
+    box-shadow: rgba(122, 186, 120, 0.5) 0px 5px 15px;
+  }
+  .medium-btn {
+    background-color: #2c4e80;
+    box-shadow: rgba(44, 78, 128, 0.5) 0px 5px 15px;
+  }
+  .hard-btn {
+    background-color: #fd4141;
+    box-shadow: rgba(253, 65, 65, 0.5) 0px 5px 15px;
+  }
 }

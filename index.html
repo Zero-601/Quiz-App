@@ -16,13 +16,30 @@
 <body>
     <div class="content">
         <h1>Quizz App</h1>
-        <input type="text">
+        <form>
+            <input type="text" placeholder="Input Your Name Here : " class="name-input">
+            <button class="submit-btn" type="submit">Submit</button>
+        </form>
         <section class="menu">
             <button class="btn-start">Start Quiz</button>
             <button class="btn-leaderboard">Leaderboard</button>
         </section>
     </div>
-    <script src="index.js"></script>
+
+    <div class="popup-area">
+        <div class="box-difficulty popup-box">
+            <div class="box-content">
+                <h2>Select Difficulty</h2>
+                <div class="diff-list">
+                    <button class="easy-btn difficulty-btn">Easy</button>
+                    <button class="medium-btn difficulty-btn">Medium</button>
+                    <button class="hard-btn difficulty-btn">Hard</button>
+                </div>
+                <button class="back-btn">Back</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js" type="module"></script>
 </body>
 
 </html>
