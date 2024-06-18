@@ -4,9 +4,20 @@ import "./event_menu.js";
 const name_input = document.getElementsByClassName("name-input")[0];
 const form = document.getElementsByTagName("form")[0];
 
-if (localStorage.length == 1) {
+if (localStorage.length != 0) {
+  console.log("test");
   const name = JSON.parse(localStorage.getItem(localStorage.key(0))).nama;
-  form.innerHTML = `<p>Welcome Back <b>${name}!</b></p>`;
+  form.innerHTML = `<div class="name-area">
+    <p>Welcome Back <b>${name}!</b></p>
+    <button class="change-btn">Change name</button>
+  </div>`;
+  document
+    .getElementsByClassName("change-btn")[0]
+    .addEventListener("click", (e) => {
+      form.innerHTML = `<input type="text" placeholder="Input Your Name Here : " class="name-input">
+            <button class="submit-btn" type="submit">Submit</button> 
+            <button class="back-btn">Back</button>`;
+    });
 }
 
 window.onload = () => {
